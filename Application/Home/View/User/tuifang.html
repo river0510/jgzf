@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BG</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/app.css">
+</head>
+<body class="home-template">
+<div class="body-center">
+    <div class="content-wrap">
+        <div class="row">
+            <div class="body-right col-md-9">
+                <div class="table-title">
+                    <span><b>房间信息</b></span>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead class="bg-info">
+           
+                    <tr>
+                        <th>序号</th>
+                        <th>小区名称</th>
+                        <th>楼栋</th>
+                        <th>房号</th>
+                        <th>户型</th>
+                        <th>校园卡号</th>
+                        <th>姓名</th>
+                        <th>部门</th>
+                        <th>面积</th>
+                        <th>入住时间</th>
+                        <th>电话</th>
+                       
+                    </tr>
+                    </thead>
+                
+                	<foreach name='name' item='n1'>
+                    <tbody>
+                    <tr>
+                    	<td>{$n1.id}</td>
+                      
+                        <td>{$n1.v_name}</td>
+                        <td>{$n1.building}</td>
+                        <td>{$n1.house_number}</td>
+                        <td>{$n1.style}</td>
+                        <td>{$n1.card_number}</td>
+                        <td>{$n1.owner_name}</td>
+                        <td>{$n1.department}</td>
+                        <td>{$n1.area}</td>
+                        <td>{$n1.start_time}</td>
+                        <td>{$n1.tel_num}</td>
+                   </tr>
+                    </tbody>
+                    </foreach>
+                
+                </table>
+					
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</body>
+</html>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        

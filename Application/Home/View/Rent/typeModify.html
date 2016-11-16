@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" />人员信息
+				</h1>
+				<table class="table table-hover">
+					<caption>人员信息</caption>
+					<thead>
+						<tr>
+							<th>类别/单位</th>
+							<th>初始折扣率</th>
+							<th>递增折扣率</th>
+							<th>最终折扣率</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+
+					<foreach name="type" item="n">
+					<tbody>
+						<tr>
+							<td>{$n.name}</td>
+							<td>{$n.start_discount}</td>
+							<td>{$n.increase_discount}</td>
+							<td>{$n.max_discount}</td>
+							<td ><a href="#"
+								data-toggle="modal" data-target=#{$n.id}>修改</a>
+								/<a href="typeDelete?id={$n.id}">删除</a>
+								<div class="modal fade" id={$n.id} tabindex="-1" role="dialog"
+									aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												<h4 class="modal-title" id="myModalLabel">修改信息：</h4>
+											</div>
+											<div class="modal-body">
+												<b>人员类别:{$n.name}</b><br>
+												<form action="__APP__/Home/Rent/typeModifyHandle"
+													method="post" target="right">
+													初始折扣率:<input name="start_discount" value={$n.start_discount}><br>
+													递增折扣率:<input name="increase_discount" value={$n.increase_discount}><br>
+													最终折扣率:<input name="max_discount" value={$n.max_discount}><br>
+													<br> <span style="margin-left: 30px; margin-top: 10px">
+														<br> <input name="id" type="hidden" value={$n.id}>
+														<button type="submit" class="btn btn-primary">确定</button>
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">取消</button>
+												</form>
+											</div>
+											<div class="modal-footer"></div>
+										</div>
+									</div>
+								</div></td>
+						</tr>
+					</tbody>
+					</foreach>
+				</table>
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="#" data-toggle="modal" data-target=#0>
+					<button type="submit" class="btn btn-primary">添加新人员类别</button></a>
+					<div class="modal fade" id=0 tabindex="-1" role="dialog"
+									aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												<h4 class="modal-title" id="myModalLabel">添加新人员类别：</h4>
+											</div>
+											<div class="modal-body">
+												<form action="__APP__/Home/Rent/typeAdd"
+													method="post" target="right">
+													人员类别:<input name="type" ><br>
+													初始折扣率:<input name="start" ><br>
+													递增折扣率:<input name="increase" ><br>
+													最终折扣率:<input name="max" ><br>
+													<br> <span style="margin-left: 30px; margin-top: 10px">
+														<br> <input name="id" type="hidden" value={$n.id}>
+														<button type="submit" class="btn btn-primary">确定</button>
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">取消</button>
+												</form>
+											</div>
+											<div class="modal-footer"></div>
+										</div>
+									</div>
+					</div>
+				</div>
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br>
+				</div>
+
+				<script src="__PUBLIC__/js/jquery.min.js"></script>
+				<script src="../../../../Public/js/jquery.min.js"></script>
+				
+				<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</body>
+</html>

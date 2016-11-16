@@ -1,0 +1,12 @@
+[ 2016-10-07T17:13:13+08:00 ] ::1 /house/index.phpHome/Rent/autoRentHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+ERR: 无法加载模块:Index.phpHome
+
+[ 2016-10-07T17:15:46+08:00 ] ::1 /house/Public/css/down-arrow.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+ERR: 无法加载模块:Public
+

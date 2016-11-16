@@ -1,0 +1,1720 @@
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.065956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005093s ]
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049337s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.018796s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018392s ]
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/assets/js/jquery-1.8.2.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+ERR: 非法操作:assets
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/assets/js/scripts.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+ERR: 非法操作:assets
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/assets/js/supersized-init.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+ERR: 非法操作:assets
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/assets/js/supersized.3.2.7.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+ERR: 非法操作:assets
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/assets/js/supersized-init.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+ERR: 非法操作:assets
+
+[ 2016-05-04T10:07:41+08:00 ] ::1 /house/index.php/Home/Index/assets/js/scripts.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+ERR: 非法操作:assets
+
+[ 2016-05-04T10:07:47+08:00 ] ::1 /house/index.php/Home/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0905s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'admin' AND `password` = 'admin'  [ RunTime:0.0008s ]
+NOTIC: [8] Use of undefined constant root - assumed 'root' H:\Demo\house\Application\Home\Controller\LoginController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\LoginController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0434s ]
+SQL: INSERT INTO `log` (`ip`,`name`,`operation`,`data`) VALUES ('0.0.0.0','','登陆','登陆成功') [ RunTime:0.0488s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2016-05-04T10:07:47+08:00 ] ::1 /house/index.php/Home/Index/top
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-05-04T10:07:48+08:00 ] ::1 /house/index.php/Home/Index/right
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0752s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `muyecun` LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2016-05-04T10:07:50+08:00 ] ::1 /house/index.php/Home/Index/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0040s ]
+SQL: SELECT DISTINCT  `v_name` FROM `muyecun`  [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2016-05-04T10:07:50+08:00 ] ::1 /house/index.php/Home/Index/min/b=CoreAdmin/js&f=cookie/jquery.cookie.js,jwysiwyg/jquery.wysiwyg.js,tooltipsy.min.js,iphone-style-checkboxes.js,excanvas.js,zoombox/zoombox.js,visualize.jQuery.js,jquery.uniform.min.js,main.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+ERR: 非法操作:min
+
+[ 2016-05-04T10:08:04+08:00 ] ::1 /house/index.php/Home/Rent/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-05-04T10:08:10+08:00 ] ::1 /house/index.php/Home/Rent/rentRecord.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0568s ]
+SQL: SELECT * FROM `person` WHERE ( card_number = 135951 )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2016-05-04T10:08:16+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0452s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0329s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0146s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 269 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-05-04T10:12:36+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 86 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 104 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2015-12-10','2015-12-31','2015-12-10','21000','','未交') [ RunTime:0.0234s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-01-01','2016-01-31','2016-01-01','30000','','未交') [ RunTime:0.0002s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-02-01','2016-02-29','2016-02-01','30000','','未交') [ RunTime:0.0002s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-03-01','2016-03-31','2016-03-01','30000','','未交') [ RunTime:0.0002s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-04-01','2016-04-30','2016-04-01','21000','','未交') [ RunTime:0.0002s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','15000','','未交') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-05-04T10:28:23+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: firstDay H:\Demo\house\Application\Home\Controller\RentController.class.php 第 224 行.
+NOTIC: [8] Undefined variable: unitPrice H:\Demo\house\Application\Home\Controller\RentController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: area H:\Demo\house\Application\Home\Controller\RentController.class.php 第 226 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 244 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 245 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-05-04T10:29:56+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: firstDay H:\Demo\house\Application\Home\Controller\RentController.class.php 第 224 行.
+NOTIC: [8] Undefined variable: unitPrice H:\Demo\house\Application\Home\Controller\RentController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: area H:\Demo\house\Application\Home\Controller\RentController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: area H:\Demo\house\Application\Home\Controller\RentController.class.php 第 227 行.
+NOTIC: [8] Undefined variable: unitPrice H:\Demo\house\Application\Home\Controller\RentController.class.php 第 227 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 244 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 245 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2016-05-04T10:31:27+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: firstDay H:\Demo\house\Application\Home\Controller\RentController.class.php 第 224 行.
+NOTIC: [8] Undefined variable: unitPrice H:\Demo\house\Application\Home\Controller\RentController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: area H:\Demo\house\Application\Home\Controller\RentController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: area H:\Demo\house\Application\Home\Controller\RentController.class.php 第 227 行.
+NOTIC: [8] Undefined variable: unitPrice H:\Demo\house\Application\Home\Controller\RentController.class.php 第 227 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 244 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 245 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-05-04T10:33:05+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: firstDay H:\Demo\house\Application\Home\Controller\RentController.class.php 第 230 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 251 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-05-04T10:40:40+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0001s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0001s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: firstDay H:\Demo\house\Application\Home\Controller\RentController.class.php 第 230 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 251 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005669s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-05-04T10:45:32+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 229 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 251 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005792s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-05-04T10:46:47+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 229 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 251 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-05-04T10:48:46+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 229 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: max_discount H:\Demo\house\Application\Home\Controller\RentController.class.php 第 251 行.
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','0','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-05-04T10:52:09+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 210 行.
+SQL: SELECT `area` FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `v_name` FROM `muyecun` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: SELECT `rent` FROM `xiaoqu` WHERE `name` LIKE '木叶村'  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant rent - assumed 'rent' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 229 行.
+SQL: SELECT * FROM `person` WHERE ( card_number=135951 )  [ RunTime:0.0002s ]
+SQL: INSERT INTO `fangzujilu` (`house_id`,`card_number`,`start_time`,`end_time`,`month`,`rent`,`res_person`,`status`) VALUES ('1','135951','2016-05-01','2016-05-31','2016-05-01','15000','','未交') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-05-04T10:53:59+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2016-05-04T10:54:03+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2016-05-04T10:55:25+08:00 ] ::1 /house/index.php/Home/Rent/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2016-05-04T10:55:39+08:00 ] ::1 /house/index.php/Home/House/addone
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0066s ]
+SQL: SELECT DISTINCT  `v_name` FROM `muyecun`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-05-04T10:55:42+08:00 ] ::1 /house/index.php/Home/Index/right?name=%E6%9C%A8%E5%8F%B6%E6%9D%91&&state=%E5%9C%A8%E7%94%A8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '在用' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '在用' LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-05-04T10:55:45+08:00 ] ::1 /house/index.php/Home/User/look?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `muyecun` WHERE ( id='1' )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-05-04T10:55:51+08:00 ] ::1 /house/index.php/Home/Index/right?name=%E6%9C%A8%E5%8F%B6%E6%9D%91&&state=%E9%97%B2%E7%BD%AE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '闲置' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '闲置' LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2016-05-04T11:11:26+08:00 ] ::1 /house/index.php/Home/Rent/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-05-04T11:11:30+08:00 ] ::1 /house/index.php/Home/Rent/rentRecord.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `person` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-05-04T11:11:32+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-05-04T11:11:36+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2016-05-04T11:20:20+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0038s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='' WHERE `id` = 0 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+
+[ 2016-05-04T11:20:36+08:00 ] ::1 /house/index.php/Home/Index/right?name=%E6%9C%A8%E5%8F%B6%E6%9D%91&&state=%E9%97%B2%E7%BD%AE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '闲置' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '闲置' LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2016-05-04T11:26:41+08:00 ] ::1 /house/index.php/Home/Rent/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-05-04T11:26:46+08:00 ] ::1 /house/index.php/Home/Rent/rentRecord.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `person` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-05-04T11:26:49+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2016-05-04T11:26:51+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0026s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='res_person' WHERE `id` = 0 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004984s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+
+[ 2016-05-04T11:28:13+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0065s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='res_person' WHERE `id` = 0 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+
+[ 2016-05-04T11:28:19+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2016-05-04T11:30:51+08:00 ] ::1 /house/index.php/Home/Rent/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2016-05-04T11:30:55+08:00 ] ::1 /house/index.php/Home/Rent/rentRecord.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `person` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-05-04T11:30:57+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 54 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 54 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 54 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 54 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 54 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 52 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 54 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-05-04T11:32:50+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-05-04T11:33:02+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2016-05-04T11:33:43+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2016-05-04T11:35:12+08:00 ] ::1 /house/index.php/Home/Index/right?name=%E6%9C%A8%E5%8F%B6%E6%9D%91&&state=%E9%97%B2%E7%BD%AE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '闲置' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '闲置' LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-05-04T11:35:15+08:00 ] ::1 /house/index.php/Home/Index/right?name=%E6%9C%A8%E5%8F%B6%E6%9D%91&&state=%E5%9C%A8%E7%94%A8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '在用' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `muyecun` WHERE `v_name` = '木叶村' AND `state` = '在用' LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2016-05-04T11:38:50+08:00 ] ::1 /house/index.php/Home/Rent/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2016-05-04T11:38:54+08:00 ] ::1 /house/index.php/Home/Rent/rentRecord.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `person` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005034s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-05-04T11:38:56+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-05-04T11:39:05+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2016-05-04T11:43:24+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 83 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 83 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 83 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 83 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 83 行.
+NOTIC: [8] Undefined variable: n1 H:\Demo\house\Application\Runtime\Cache\Home\54f4eb288bdff69eb99cd972b77d4453.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-05-04T11:48:28+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-05-04T11:49:05+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='res_person' WHERE `id` = 0 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+
+[ 2016-05-04T11:50:23+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0063s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='loser' WHERE `id` = 27 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004185s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-05-04T11:50:25+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-05-04T12:01:03+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-05-04T12:01:13+08:00 ] ::1 /house/index.php/Home/Rent/rentPayHandle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0037s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='loser',`status`='已交' WHERE `id` = 27 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-05-04T12:01:15+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2016-05-04T12:01:27+08:00 ] ::1 /house/index.php/Home/Rent/rentPayBackout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0034s ]
+SQL: UPDATE `fangzujilu` SET `res_person`='',`status`='未交' WHERE `id` = 27 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-05-04T12:01:29+08:00 ] ::1 /house/index.php/Home/Rent/rentPay?card_number=135951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `person` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant y - assumed 'y' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 235 行.
+NOTIC: [8] Undefined variable: data H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+NOTIC: [2] Invalid argument supplied for foreach() H:\Demo\house\Application\Home\Controller\RentController.class.php 第 313 行.
+SQL: SELECT * FROM `fangzujilu` WHERE ( card_number = 135951 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `muyecun` WHERE ( card_number = 135951 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+

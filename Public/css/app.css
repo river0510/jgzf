@@ -1,0 +1,321 @@
+html,body{
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+	background: url(img/bg.png);
+    line-height: 1.75em;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+
+#head-title{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    margin-left: 300px;
+}
+
+.main-header {
+    background: #5bc0de;
+    padding: 30px 0px;
+}
+#content table{
+	width: 100%;
+	text-align: left;
+}
+#content table .picture img{
+	border: 4px solid #DFDFDF;
+	margin: 7px;
+	padding: 0px;
+}
+#content table .picture a:hover img{
+	border-color: #BDBDBD;
+}
+#content table h1, #content table h2, #content table h3, #content table h4, #content table h5{
+	display: inline;
+}
+#content table thead th{
+	border-bottom: 1px solid #BDBDBD;
+}
+#content table thead tr th{
+	font-weight: bold;
+	color: #151515;
+	font-size: 1.1em;
+	padding-bottom: 2px;
+}
+#content table thead tr th a{
+	color: #151515;
+}
+#content table tbody tr td{
+	height: 30px;
+	vertical-align: middle;
+	border-bottom: 1px solid #DADADA;
+	border-top: 1px solid #FFFFFF;
+}
+#content table tbody tr:nth-child(2n+1) td{
+	background-color: #F0F0F0;
+}
+#content table tbody tr:hover td{
+	background-color: #EAEAEA;
+	border-bottom: 1px solid #CACACA;
+	border-top: 1px solid #E2E2E2;
+}
+#content table tbody tr td.actions{
+	text-align: right;
+	padding-right: 10px;
+	width: 70px;
+}
+#content table.noalt tbody tr td{
+	background-color: transparent !important;
+	border-bottom: 1px solid #DADBDD;
+}
+#content table.noborder tbody tr td{
+	border: none;
+}
+#content table tbody tr td img{
+	padding-right: 5px;
+}
+/**  Tabs **/
+#content .title .tabs{
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	height: 31px;
+}
+#content .title .tabs a{
+	padding: 1px 21px 0;
+	/*+border-radius:6px 6px 0 0;*/
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	-khtml-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #B2B2B2;
+	text-decoration: none;
+	margin: 5px 0 0px 0px;
+}
+#content .title .tabs a.active, #content .title .tabs a:hover{
+	color: #000;
+	border: 1px solid #CFD1D4;
+	border-bottom: none;
+	background-color: #F7F7F7;
+	padding: 0 20px;
+	/*+text-shadow:none;*/
+	-moz-text-shadow: none;
+	-webkit-text-shadow: none;
+	-o-text-shadow: none;
+	text-shadow: none;
+}
+
+/** Search Form **/
+#left-search .search{
+	position: relative;
+	width: 215px;
+	height: 25px;
+	background-position: 0px -65px;
+	margin-top: 5px;
+	/*+border-radius:5px;*/
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #505050;
+}
+#left-search .search input.text{
+	position: absolute;
+	border: none;
+	background: #ffffff;
+	width: 180px;
+	height: 25px;
+	line-height: 27px;
+	padding: 0 5px;
+	color: #CCC;
+	/*+text-shadow:0 1px 0px #000;*/
+	-moz-text-shadow: 0 1px 0px #000;
+	-webkit-text-shadow: 0 1px 0px #000;
+	-o-text-shadow: 0 1px 0px #000;
+	text-shadow: 0 1px 0px #000;
+}
+#left-search .search input.submit{
+	height: 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25px;
+	background: url(img/search.png) no-repeat center center;
+	border: none;
+	cursor: pointer;
+	text-indent: 3000px;
+	overflow: hidden;
+}
+#left-search .search label{
+	position: absolute;
+	border: none;
+	background: none;
+	width: 194px;
+	height: 22px;
+	line-height: 25px;
+	padding: 0 5px;
+}
+.main-navigation{
+    font-size: 1.15em;
+    text-align: center;
+    background: #ffffff;
+    border-top: 0.16em solid #ebebeb;
+    border-bottom: 0.2em solid #e1e1e1;
+}
+
+.main-navigation .menu li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-bottom: -0.75em;
+
+}
+
+.main-navigation .menu li.nav-current{
+    border-bottom: 3px solid #e67e22;
+}
+
+
+
+.main-navigation .menu li a{
+    text-decoration: none;
+    color: #505050;
+    display: block;
+    line-height: 4em;
+    padding: 0 25px;
+}
+
+.main-navigation .menu li a:hover{
+    color: #e67e22;
+}
+.body-left .search {
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+.body-left{
+    background: url(img/bg.png);
+}
+
+.body-right{
+    background: url(img/bg.png);
+}
+
+.body-center{
+    margin-top: 40px;
+}
+.body-center .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.body-right{
+    margin-left: 80px;
+}
+
+.body-left .collapse{
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.body-left .well{
+    padding-top: 20px;
+}
+
+.body-left .btn{
+    margin-bottom: 3px;
+}
+
+
+#content table{
+	width: 100%;
+	text-align: left;
+}
+#content table .picture img{
+	border: 4px solid #DFDFDF;
+	margin: 7px;
+	padding: 0px;
+}
+#content table .picture a:hover img{
+	border-color: #BDBDBD;
+}
+#content table h1, #content table h2, #content table h3, #content table h4, #content table h5{
+	display: inline;
+}
+#content table thead th{
+	border-bottom: 1px solid #BDBDBD;
+}
+#content table thead tr th{
+	font-weight: bold;
+	color: #151515;
+	font-size: 1.1em;
+	padding-bottom: 2px;
+}
+#content table thead tr th a{
+	color: #151515;
+}
+#content table tbody tr td{
+	height: 30px;
+	vertical-align: middle;
+	border-bottom: 1px solid #DADADA;
+	border-top: 1px solid #FFFFFF;
+}
+#content table tbody tr:nth-child(2n+1) td{
+	background-color: #F0F0F0;
+}
+#content .thead{
+	background-color: #F0F0F0;
+}
+#content table tbody tr:hover td{
+	background-color: #EAEAEA;
+	border-bottom: 1px solid #CACACA;
+	border-top: 1px solid #E2E2E2;
+}
+#content table tbody tr td.actions{
+	text-align: right;
+	padding-right: 10px;
+	width: 70px;
+}
+#content table.noalt tbody tr td{
+	background-color: transparent !important;
+	border-bottom: 1px solid #DADBDD;
+}
+#content table.noborder tbody tr td{
+	border: none;
+}
+#content table tbody tr td img{
+	padding-right: 5px;
+}
+
+.page{
+    font-size: 21px;
+    text-align: center;
+}
+
+.page a{
+    text-decoration: none;
+    padding: 2px 10px;
+    background: #afd9ee;
+    margin-left: 2px;
+}
+#logout
+{
+    color: #ffffff;
+    padding-left: 600px;
+}
+
+#addone option{
+	padding: 50px;
+}
+
+
+
+
+
+

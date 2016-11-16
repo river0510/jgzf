@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+<script src="__PUBLIC__/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" /> {$time['y']}年{$time['m']}月周转房扣缴房租统计表
+				</h1>
+				<table class="table table-hover">
+					<caption>{$time['y']}年{$time['m']}月周转房扣缴房租统计表</caption>
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>小区名称</th>
+							<th>工资库代扣人数</th>
+							<th>工资库代扣金额</th>
+							<th>师院代扣人数</th>
+							<th>师院代扣金额</th>
+							<th>附中代扣人数</th>
+							<th>附中代扣金额</th>
+							<th>银行代扣人数</th>
+							<th>银行代扣金额</th>
+						</tr>
+					</thead>
+					<foreach name="data" item="c">
+					<tbody>
+						<tr>
+							<td>{$key+1}</td>
+							<td>{$c.name}</td>
+							<td>{$c.person1}</td>
+							<td>{$c.rent1}</td>
+							<td>{$c.person2}</td>
+							<td>{$c.rent2}</td>
+							<td>{$c.person3}</td>
+							<td>{$c.rent3}</td>
+							<td>{$c.person4}</td>
+							<td>{$c.rent4}</td>
+						</tr>
+					</tbody>
+					</foreach>
+				</table>
+
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="__APP__/Home/Rent/form4Excel?y={$time['y']}&w={$time['m']}"><button
+							type="submit" class="btn btn-primary">导出excel</button></a>
+				</div>
+</body>
+</html>

@@ -1,0 +1,358 @@
+[ 2016-06-13T20:07:37+08:00 ] ::1 /house/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008552s ]
+
+[ 2016-06-13T20:07:37+08:00 ] ::1 /house/index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.103264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.022075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014639s ]
+
+[ 2016-06-13T20:07:37+08:00 ] ::1 /house/index.php/Home/Index/assets/js/jquery-1.8.2.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+ERR: 非法操作:assets
+
+[ 2016-06-13T20:07:37+08:00 ] ::1 /house/index.php/Home/Index/assets/js/supersized.3.2.7.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+ERR: 非法操作:assets
+
+[ 2016-06-13T20:07:37+08:00 ] ::1 /house/index.php/Home/Index/assets/js/supersized-init.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+ERR: 非法操作:assets
+
+[ 2016-06-13T20:07:37+08:00 ] ::1 /house/index.php/Home/Index/assets/js/scripts.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+ERR: 非法操作:assets
+
+[ 2016-06-13T20:07:41+08:00 ] ::1 /house/index.php/Home/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0712s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'admin' AND `password` = 'admin'  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant root - assumed 'root' H:\Demo\house\Application\Home\Controller\LoginController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\LoginController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0476s ]
+SQL: INSERT INTO `log` (`ip`,`name`,`operation`,`data`) VALUES ('0.0.0.0','','登陆','登陆成功') [ RunTime:0.0473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2016-06-13T20:07:41+08:00 ] ::1 /house/index.php/Home/Index/top
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027984s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001239s ]
+
+[ 2016-06-13T20:07:42+08:00 ] ::1 /house/index.php/Home/Index/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0494s ]
+SQL: SELECT DISTINCT  `v_name` FROM `muyecun`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2016-06-13T20:07:43+08:00 ] ::1 /house/index.php/Home/Index/right
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `muyecun` LIMIT 1   [ RunTime:0.0285s ]
+SQL: SELECT * FROM `muyecun` LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-06-13T20:07:43+08:00 ] ::1 /house/index.php/Home/Index/min/b=CoreAdmin/js&f=cookie/jquery.cookie.js,jwysiwyg/jquery.wysiwyg.js,tooltipsy.min.js,iphone-style-checkboxes.js,excanvas.js,zoombox/zoombox.js,visualize.jQuery.js,jquery.uniform.min.js,main.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+ERR: 非法操作:min
+
+[ 2016-06-13T20:07:44+08:00 ] ::1 /house/index.php/Home/Rent/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-06-13T20:07:49+08:00 ] ::1 /house/index.php/Home/Rent/form1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0842s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0563s ]
+SQL: SHOW COLUMNS FROM `form1_temp` [ RunTime:0.0711s ]
+SQL: SELECT `time` FROM `form1_temp`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xiaoqu`  [ RunTime:0.0183s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 582 行.
+SQL: SELECT * FROM `muyecun` WHERE `v_name` LIKE '木叶村'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 1 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 294 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0003s ]
+SQL: DELETE FROM `form1_temp` WHERE ( id = 67 ) [ RunTime:0.0373s ]
+SQL: INSERT INTO `form1_temp` (`time`,`name`,`rent`,`expense`,`manage`,`others`) VALUES ('2016-06-02','木叶村','18000','23084','0','0') [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 582 行.
+SQL: SELECT * FROM `muyecun` WHERE `v_name` LIKE '雾忍者村'  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 4 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: DELETE FROM `form1_temp` WHERE ( id = 68 ) [ RunTime:0.0002s ]
+SQL: INSERT INTO `form1_temp` (`time`,`name`,`rent`,`expense`,`manage`,`others`) VALUES ('2016-06-02','雾忍者村','0','0','0','0') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined index: rent-Array H:\Demo\house\Application\Runtime\Cache\Home\ac149f36c8880b3fd465ba2e6f22e893.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2016-06-13T20:09:43+08:00 ] ::1 /house/index.php/Home/Rent/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2016-06-13T20:09:46+08:00 ] ::1 /house/index.php/Home/Rent/form1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0148s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `form1_temp` [ RunTime:0.0084s ]
+SQL: SELECT `time` FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xiaoqu`  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 582 行.
+SQL: SELECT * FROM `muyecun` WHERE `v_name` LIKE '木叶村'  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 1 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 294 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: DELETE FROM `form1_temp` WHERE ( id = 69 ) [ RunTime:0.0002s ]
+SQL: INSERT INTO `form1_temp` (`time`,`name`,`rent`,`expense`,`manage`,`others`) VALUES ('2016-06-01','木叶村','18000','23084','0','0') [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 582 行.
+SQL: SELECT * FROM `muyecun` WHERE `v_name` LIKE '雾忍者村'  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 4 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: DELETE FROM `form1_temp` WHERE ( id = 70 ) [ RunTime:0.0002s ]
+SQL: INSERT INTO `form1_temp` (`time`,`name`,`rent`,`expense`,`manage`,`others`) VALUES ('2016-06-01','雾忍者村','0','0','0','0') [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: rent-Array H:\Demo\house\Application\Runtime\Cache\Home\ac149f36c8880b3fd465ba2e6f22e893.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-06-13T20:10:06+08:00 ] ::1 /house/index.php/Home/Rent/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000345s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-06-13T20:10:09+08:00 ] ::1 /house/index.php/Home/Rent/form1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `muyecun` [ RunTime:0.0132s ]
+SQL: SHOW COLUMNS FROM `fangzujilu` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `xiaoqu` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `form1_temp` [ RunTime:0.0083s ]
+SQL: SELECT `time` FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xiaoqu`  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 582 行.
+SQL: SELECT * FROM `muyecun` WHERE `v_name` LIKE '木叶村'  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 1 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 294 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: DELETE FROM `form1_temp` WHERE ( id = 71 ) [ RunTime:0.0002s ]
+SQL: INSERT INTO `form1_temp` (`time`,`name`,`rent`,`expense`,`manage`,`others`) VALUES ('2016-06-01','木叶村','18000','23084','0','0') [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' H:\Demo\house\Application\Home\Controller\RentController.class.php 第 582 行.
+SQL: SELECT * FROM `muyecun` WHERE `v_name` LIKE '雾忍者村'  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 4 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `fangzujilu` WHERE ( house_id = 8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0002s ]
+SQL: DELETE FROM `form1_temp` WHERE ( id = 72 ) [ RunTime:0.0001s ]
+SQL: INSERT INTO `form1_temp` (`time`,`name`,`rent`,`expense`,`manage`,`others`) VALUES ('2016-06-01','雾忍者村','0','0','0','0') [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2016-06-13T20:10:16+08:00 ] ::1 /house/index.php/Home/Rent/form1Excel
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [2] unlink(./Application/Runtime/Temp/8d777f385d3dfec8815d20f7496026dc.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory H:\Demo\house\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `form1_temp` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `form1_temp`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: fileName H:\Demo\house\Application\Home\Controller\RentController.class.php 第 676 行.
+

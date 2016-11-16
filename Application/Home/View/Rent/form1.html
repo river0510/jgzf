@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+<script src="__PUBLIC__/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" /> {$time['y']}年{$time['m']}月各小区租金收付对照统计表
+				</h1>
+				<table class="table table-hover">
+					<caption>{$time['y']}年{$time['m']}月各小区租金收付对照统计表</caption>
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>小区名称</th>
+							<th>入住套数</th>
+							<th>收回租金（月/元）</th>
+							<th>支出租金（月/元）</th>
+							<th>管理费（月/元）</th>
+							<th>备注</th>
+						</tr>
+					</thead>
+					<foreach name="data" item="c">
+					<tbody>
+						<tr>
+							<td>{$key+1}</td>
+							<td>{$c.name}</td>
+							<td>{$c.number}</td>
+							<td>{$c.rent}</td>
+							<td>{$c.expense}</td>
+							<td>{$c.manage}</td>
+							<td>{$c.others}</td>
+						</tr>
+					</tbody>
+					</foreach>
+					<tbody>
+						<tr>
+							<td> </td>
+							<td>合计</td>
+							<td></td>
+							<td>{$total.rent}</td>
+							<td>{$total.expense}</td>
+							<td>{$total.manage}</td>
+							<td>{$total.others}</td>
+							<td> </td>
+						</tr>
+					</tbody>
+					<tfoot><tr><td>合计差额：</td><td>{$total.differ}</td></tr></tfoot>
+				</table>
+
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="__APP__/Home/Rent/form1Excel"><button
+							type="submit" class="btn btn-primary">导出excel</button></a>
+				</div>
+</body>
+</html>

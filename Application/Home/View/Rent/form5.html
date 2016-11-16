@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+<script src="__PUBLIC__/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" />
+					{$time['y']}年{$time['m']}月周转房房租扣缴明细表(未交租)
+				</h1>
+				<table class="table table-hover">
+					<caption>{$time['y']}年{$time['m']}月周转房房租扣缴明细表(未交租)</caption>
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>小区名称</th>
+							<th>房号</th>
+							<th>面积</th>
+							<th>校园卡号</th>
+							<th>姓名</th>
+							<th>租金</th>
+							<th>扣缴说明</th>
+							<th>入住时间</th>
+							<th>备注</th>
+						</tr>
+					</thead>
+					<foreach name="data" item="n">
+					<foreach name="n" item="c">
+					<tbody>
+						<tr>
+							<td>{$key+1}</td>
+							<td>{$c['v_name']}</td>
+							<td>{$c['house_number']}</td>
+							<td>{$c['area']}</td>
+							<td>{$c['card_number']}</td>
+							<td>{$c['name']}</td>
+							<td>{$c['rent']}</td>
+							<td>{$c['time']}</td>
+							<td>{$c['start_time']}</td>
+							<td>  </td>
+						</tr>
+					</tbody>
+					</foreach>
+					</foreach>
+				</table>
+
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="__APP__/Home/Rent/form5Excel?y={$time['y']}&w={$time['m']}">
+						<button type="submit" class="btn btn-primary">导出excel</button></a>
+				</div>
+</body>
+</html>

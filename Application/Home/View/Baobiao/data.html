@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+<script src="__PUBLIC__/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" /> 房源信息统计报表
+				</h1>
+				<table class="table table-hover">
+					<caption>房源信息统计报表</caption>
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>小区名称</th>
+							<th>房号</th>
+							<th>面积</th>
+							<th>户型</th>
+							<th>楼栋</th>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>电话号码</th>
+							<th>校园卡号</th>
+							<th>部门</th>
+							<th>入住时间</th>
+							</if>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<foreach name="condition" item="c">
+					<tbody>
+						<tr>
+							<td>{$key+1}</td>
+							<td>{$c.v_name}</td>
+							<td>{$c.house_number}</td>
+							<td>{$c.area}</td>
+							<td>{$c.style}</td>
+							<td>{$c.building}</td>
+
+							<td>{$c.owner_name}</td>
+							<td>{$c.sex}</td>
+							<td>{$c.tel_num}</td>
+							<td>{$c.card_number}</td>
+							<td>{$c.department}</td>
+							<td>{$c.start_time}</td>
+							</if>
+							<td>{$c.state}</td>
+						</tr>
+					</tbody>
+					</foreach>
+				</table>
+				<div class="result page" id="fenye1">{$page}</div>
+
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="__APP__/Home/Baobiao/excel"><button
+							type="submit" class="btn btn-primary">导出excel</button></a>
+				</div>
+</body>
+</html>

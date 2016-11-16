@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" />小区信息
+				</h1>
+				<table class="table table-hover">
+					<caption>小区信息</caption>
+					<thead>
+						<tr>
+							<th>名称</th>
+							<th>房源种类</th>
+							<th>每平米每月租金</th>
+							<th>学校收入</th>
+							<th>学校支出</th>
+							<th>管理费</th>
+							<th>其他费用</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+
+					<foreach name="xiaoqu" item="n">
+					<tbody>
+						<tr>
+							<td>{$n.name}</td>
+							<td>{$n.type}</td>
+							<td>{$n.rent}</td>
+							<td>{$n.income}</td>
+							<td>{$n.expenditure}</td>
+							<td>{$n.manage}</td>
+							<td>{$n.others}</td>
+							<td ><a href="#"
+								data-toggle="modal" data-target=#{$n.id}>修改</a>
+								<div class="modal fade" id={$n.id} tabindex="-1" role="dialog"
+									aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												<h4 class="modal-title" id="myModalLabel">修改信息：</h4>
+											</div>
+											<div class="modal-body">
+												<b>小区名称:{$n.name}</b><br>
+												<form action="__APP__/Home/Rent/xiaoquModifyHandle"
+													method="post" target="right">
+													<label> <span>房源种类：</span> <select name="type"
+													onChange="getMan()">
+													<if condition="($n.type eq '政府')">
+													<option selected="selected">政府</option>
+													<else /><option >政府</option>
+													</if>
+													<if condition="($n.type eq '区政府')">
+													<option selected="selected">区政府</option>
+													<else /><option >区政府</option>
+													</if>
+													<if condition="($n.type eq '自有')">
+													<option selected="selected">自有</option>
+													<else /><option >自有</option>
+													</if>
+													<if condition="($n.type eq '社会')">
+													<option selected="selected">社会</option>
+													<else /><option >社会</option>
+													</if>
+													</select>
+													</label><br>
+													每月租金（每平米）:<input name="rent" value={$n.rent}><br>
+													学校收入:<input name="income" value={$n.income}><br>
+													学校支出:<input name="expenditure" value={$n.expenditure}><br>
+													管理费:<input name="manage" value={$n.manage}><br>
+													其他费用:<input name="others" value={$n.others}><br>
+													<br> <span style="margin-left: 30px; margin-top: 10px">
+														<br> <input name="id" type="hidden" value={$n.id}>
+														<button type="submit" class="btn btn-primary">确定</button>
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">取消</button>
+												</form>
+											</div>
+											<div class="modal-footer"></div>
+										</div>
+									</div>
+								</div>
+								/<a href="xiaoquDelete?id={$n.id}">删除</a>
+							</td>
+						</tr>
+					</tbody>
+					</foreach>
+				</table>
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="#" data-toggle="modal" data-target=#1>
+					<button type="submit" class="btn btn-primary">添加新小区</button></a>
+					<div class="modal fade" id=1 tabindex="-1" role="dialog"
+									aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												<h4 class="modal-title" id="myModalLabel">添加小区：</h4>
+											</div>
+											<div class="modal-body">
+												<form action="__APP__/Home/Rent/xiaoquAdd"
+													method="post" target="right">
+													小区名称:<input name="name" ><br>
+													<label> <span>房源种类：</span> <select name="type"
+													onChange="getMan()">
+													<option value="0"></option>
+													<option>政府</option>
+													<option>区政府</option>
+													<option>自有</option>
+													<option>社会</option>
+													</select>
+													</label><br>
+													每月租金（每平米）:<input name="rent" ><br>
+													学校收入:<input name="income" ><br>
+													学校支出:<input name="expenditure" ><br>
+													管理费:<input name="manage" ><br>
+													其他费用:<input name="others" ><br>
+													<br> <span style="margin-left: 30px; margin-top: 10px">
+														<br> <input name="id" type="hidden" value={$n.id}>
+														<button type="submit" class="btn btn-primary">确定</button>
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">取消</button>
+												</form>
+											</div>
+											<div class="modal-footer"></div>
+										</div>
+									</div>
+					</div>
+				</div>
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br>
+				</div>
+
+				<script src="__PUBLIC__/js/jquery.min.js"></script>
+				<script src="../../../../Public/js/jquery.min.js"></script>
+				
+				<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</body>
+</html>

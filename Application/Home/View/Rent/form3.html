@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" href="__PUBLIC__/css/app.css">
+<script src="__PUBLIC__/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="bloc" id="content">
+
+		<div class="content-wrap">
+			<div class="container">
+
+
+				<h1>
+					<img src="__PUBLIC__/images/icons/posts.png" alt="" />
+					{$time['y']}年{$time['m']}月房源分类统计表
+				</h1>
+				<table class="table table-hover">
+					<caption>{$time['y']}年{$time['m']}月房源分类统计表</caption>
+					<thead>
+						<tr>
+							<th>房源类别</th>
+							<th>小区名称</th>
+							<th>单价</th>
+							<th>总套数</th>
+							<th>入住套数</th>
+							<th>收入</th>
+							<th>支出</th>
+							<th>实际金额</th>
+						</tr>
+					</thead>
+					<tbody>
+					<foreach name="data" item="n">
+					<foreach name="n" item="c">
+						<tbody>
+						<tr>
+							<td>{$c['type']}</td>
+							<td>{$c['name']}</td>
+							<td>{$c['price']}</td>
+							<td>{$c['totalHouse']}</td>
+							<td>{$c['usedHouse']}</td>
+							<td>{$c['rent']}</td>
+							<td>{$c['expense']}</td>
+							<td>{$c['differ']}</td>
+						</tr>
+						</tbody>
+					</foreach>
+					</foreach>
+						<tbody>
+						<tr>
+							<td>{$total['type']}</td>
+							<td>{$total['name']}</td>
+							<td>{$total['price']}</td>
+							<td>{$total['totalHouse']}</td>
+							<td>{$total['usedHouse']}</td>
+							<td>{$total['rent']}</td>
+							<td>{$total['expense']}</td>
+							<td>{$total['differ']}</td>
+						</tr>
+						</tbody>
+				</table>
+
+				<div class="table-foot NoPrint" style="text-align: center">
+					<br> <a href="__APP__/Home/Rent/form3Excel?y={$time['y']}&w={$time['m']}">
+						<button type="submit" class="btn btn-primary">导出excel</button></a>
+				</div>
+</body>
+</html>

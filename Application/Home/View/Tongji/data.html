@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bootstrap 实例 - 悬停表格</title>
+   <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="__PUBLIC__/css/app.css">
+   <script src="__PUBLIC__/jquery.min.js"></script>
+   <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<table class="table table-hover">
+   <caption>教工住宿信息统计表</caption>
+   <thead>
+      <tr>
+      <foreach name="condition1" item="c">
+         <th>{$c}</th>
+         
+        </foreach>
+      </tr>
+   </thead>
+   <tbody>
+      <foreach name="condition" item="sum">
+      <td>{$sum}</td>
+      </foreach>
+   </tbody>
+</table>
+
+</body>
+</html>
