@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>BG</title>
-    <link rel="stylesheet" href="/Public/css/bootstrap.css">
+    <link rel="stylesheet" href="/jgzf/Public/css/bootstrap.css">
    
-    <link rel="stylesheet" href="/Public/css/app.css">
-    <link rel="stylesheet" href="/Public/css/form.css">
+    <link rel="stylesheet" href="/jgzf/Public/css/app.css">
+    <link rel="stylesheet" href="/jgzf/Public/css/form.css">
     <style type='text/css'>
         @media print {
             .NoPrint { display: none; }
@@ -80,7 +80,7 @@
 		</div>
 	</div>
 
-	<script src="/Public/js/jquery.min.js"></script>
-	<script src="/Public/js/bootstrap.min.js"></script>
+	<script src="/jgzf/Public/js/jquery.min.js"></script>
+	<script src="/jgzf/Public/js/bootstrap.min.js"></script>
 </body>
 </html>

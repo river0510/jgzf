@@ -16,8 +16,8 @@
                 <h1><img src="/jgzf/Public/images/icons/posts.png" alt="" /> 人员信息</h1>
                 <table class="table table-striped table-hover">
                     <thead>
-
                         <tr>
+                            <th>序号</th>
                             <th>校园卡号</th>
                             <th>姓名</th>
                             <th>性别</th>
@@ -34,6 +34,7 @@
 
                     <?php if(is_array($data)): foreach($data as $key=>$n1): ?><tbody>
                             <tr>
+                                <td><?php echo ($key+1); ?></td>
                                 <td><?php echo ($n1["card_number"]); ?></td>
                                 <td><?php echo ($n1["name"]); ?></td>
                                 <td><?php echo ($n1["sex"]); ?></td>
@@ -46,6 +47,7 @@
                                 <td><?php echo ($n1["discount_time"]); ?></td>
                                 <td>
                                     <a href="peopleModify?id=<?php echo ($n1["id"]); ?>">修改</a>
+                                    <br>
                                     <a href="peopleDelete?id=<?php echo ($n1["id"]); ?>">删除</a>
                                 </td>
                             </tr>
@@ -53,7 +55,7 @@
 
                 </table>
                 <div class="result page" id="fenye1"><?php echo ($page); ?></div>
-            <div style="text-align: center; width: 100%;">
+            <div style="text-align: center; width: 100%; margin: 20px">
             <a type="button" class="btn btn-primary" href="infoExcel">导出人员信息</a>
             </div>
             </div>

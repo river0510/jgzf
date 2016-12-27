@@ -43,6 +43,7 @@ class UserController extends Controller {
        {
            $this->assign('name',$res);
            $this->assign('page',$show);
+           $this->assign('count',$count);
            $this->display('Index/right');
        }
        //为空则说明输入信息有误
@@ -85,6 +86,20 @@ class UserController extends Controller {
        $res['start_time'] = date("Y-m-d");
        $res['state'] = '在用';
        
+      //判断是否已分配房屋，是否登记信息
+      $person = M('person');
+      $house = M('muyecun');
+      $card_number = I('post.num');
+      $result = $person->where("card_number = $card_number")->select();
+      $isHad = $house->where("card_number = $card_number")->select();
+      if($result){
+            if($isHad){
+                $this->error('该人员已分配房屋');
+            }
+        }else{
+            $this->error('该人员未登记信息');
+        }
+
        //存在的情况下，把教职工信息和该住房信息显示出来，以防错误操作
      
            $village = M('muyecun');
@@ -163,10 +178,14 @@ class UserController extends Controller {
 
        //判断该月是否交租
        $rentRecord = M('fangzujilu');
-       $res = $rentRecord->where("house_id = $id")->order('id desc')->select();
-       list($t1['y'],$t1['m'])=explode("-",$res[0]['start_time']);
        list($t2['y'],$t2['m'])=explode("-",date("Y-m-d"));
-       if(!($t1['y']==$t2['y']&&$t1['m']==$t2['m']&&$res[0]['status']=="已交")){
+       $month = $t2['y']."-".$t2['m']."-01";
+       $where = array(
+          'month'=>$month,
+          'house_id'=>$id
+        );
+       $res = $rentRecord->where($where)->order('id desc')->select();
+       if(!($res[0]['status']== "已交")){
           $this->error("请先交清当前房租，再退房");
        }
    
@@ -177,7 +196,7 @@ class UserController extends Controller {
       $data['card_number'] = '';
       $data['owner_name'] = '';
       $data['sex'] = '';
-      $data['start_time'] = '0000-00-00';
+      $data['start_time'] = null;
       $data['department'] = '';
       $data['tel_num'] = '';
       $data['hadle_man'] = '';

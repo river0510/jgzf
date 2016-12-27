@@ -19,10 +19,12 @@ class LoginController extends Controller {
             if($result[0][root]==1)
             {
                 $name = $result[0][name];
+                $root = $result[0][root];
                 $ip = get_client_ip();
                 //把name和id保存在session中
                 session('name',$name);
                 session('id',$id);
+                session('root',$root);
                 //登陆成功，记录到系统日记
                 $log = M('log');
                 $data['ip'] = $ip; 

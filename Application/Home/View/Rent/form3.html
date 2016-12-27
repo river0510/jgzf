@@ -21,6 +21,7 @@
 				</h1>
 				<table class="table table-hover">
 					<caption>{$time['y']}年{$time['m']}月房源分类统计表</caption>
+					<p style="font-size: 15px; color:red">注：若金额为0，请先生成当月的个小区租金对照表（表1）</p>
 					<thead>
 						<tr>
 							<th>房源类别</th>
@@ -65,8 +66,8 @@
 				</table>
 
 				<div class="table-foot NoPrint" style="text-align: center">
-					<br> <a href="__APP__/Home/Rent/form3Excel?y={$time['y']}&w={$time['m']}">
-						<button type="submit" class="btn btn-primary">导出excel</button></a>
+					<a href="__APP__/Home/Rent/form3Excel?y={$time['y']}&w={$time['m']}">
+						<button type="submit" class="btn btn-primary" style="margin: 10px">导出excel</button></a>
 				</div>
 </body>
 </html>

@@ -37,12 +37,12 @@ class HouseController extends Controller {
        $page = new \Think\Page($count,10);
        $show = $page->show();
        $res = $table->where($condition)->limit($page->firstRow.','.$page->listRows)->select(); 
-       
        //搜索结果返回页面显示
        if($res)
        {
            $this->assign('name',$res);
            $this->assign('page',$show);
+           $this->assign('count',$count);
            $this->display('House/right');
        }
        //为空则说明输入信息有误

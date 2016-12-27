@@ -13,12 +13,11 @@
         <div id="head">
             <div class="left">
                 <a href="#" class="button profile"><img src="/jgzf/Public/images/icons/top/huser.png" alt="" /></a>
-                Hi, 
-                <a href="#"><?php echo (session('name')); ?></a>
-                |
+                Hi, <?php echo (session('name')); ?>
                 <a href="/jgzf/index.php/Home/logout/index" target="_parent">退出系统</a>
-            </div>
-            
+                |
+                <a href="/jgzf/index.php/Home/admin/index" target="right" >用户管理</a>
+            </div>   
         </div>
         
 </html>

@@ -23,10 +23,10 @@
 						<tr>
 							<th>名称</th>
 							<th>房源种类</th>
-							<th>每平米每月租金</th>
-							<th>学校收入</th>
-							<th>学校支出</th>
-							<th>管理费</th>
+							<th>租金<br>(元/每平米每月)</th>
+							<th>学校收入<br>(元/每平米每月)</th>
+							<th>学校支出<br>(元/每月）</th>
+							<th>管理费<br>(元/每月）</th>
 							<th>其他费用</th>
 							<th>操作</th>
 						</tr>
@@ -71,9 +71,9 @@
 													</select>
 													</label><br>
 													每月租金（每平米）:<input name="rent" value=<?php echo ($n["rent"]); ?>><br>
-													学校收入:<input name="income" value=<?php echo ($n["income"]); ?>><br>
-													学校支出:<input name="expenditure" value=<?php echo ($n["expenditure"]); ?>><br>
-													管理费:<input name="manage" value=<?php echo ($n["manage"]); ?>><br>
+													学校收入(元/每平米每月):<input name="income" value=<?php echo ($n["income"]); ?>><br>
+													学校支出(元/每月）:<input name="expenditure" value=<?php echo ($n["expenditure"]); ?>><br>
+													管理费(元/每月）:<input name="manage" value=<?php echo ($n["manage"]); ?>><br>
 													其他费用:<input name="others" value=<?php echo ($n["others"]); ?>><br>
 													<br> <span style="margin-left: 30px; margin-top: 10px">
 														<br> <input name="id" type="hidden" value=<?php echo ($n["id"]); ?>>
@@ -105,23 +105,23 @@
 												</button>
 												<h4 class="modal-title" id="myModalLabel">添加小区：</h4>
 											</div>
-											<div class="modal-body">
+											<div class="modal-body" >
 												<form action="/jgzf/index.php/Home/Rent/xiaoquAdd"
 													method="post" target="right">
 													小区名称:<input name="name" ><br>
 													<label> <span>房源种类：</span> <select name="type"
 													onChange="getMan()">
-													<option value="0"></option>
+													<option value="0">请选择</option>
 													<option>政府</option>
 													<option>区政府</option>
 													<option>自有</option>
 													<option>社会</option>
 													</select>
 													</label><br>
-													每月租金（每平米）:<input name="rent" ><br>
-													学校收入:<input name="income" ><br>
-													学校支出:<input name="expenditure" ><br>
-													管理费:<input name="manage" ><br>
+													租金(元/每平米每月):<input name="rent" ><br>
+													学校收入(元/每平米每月):<input name="income" ><br>
+													学校支出(元/每月）:<input name="expenditure" ><br>
+													管理费(元/每月）:<input name="manage" ><br>
 													其他费用:<input name="others" ><br>
 													<br> <span style="margin-left: 30px; margin-top: 10px">
 														<br> <input name="id" type="hidden" value=<?php echo ($n["id"]); ?>>

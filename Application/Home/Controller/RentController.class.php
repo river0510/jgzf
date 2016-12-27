@@ -40,8 +40,13 @@ class RentController extends Controller
             $this->assign('personInfo', $res[0]);
             $house = M('muyecun');
             $res2 = $house->where("card_number = $card_number")->select();
-            $this->assign('houseInfo', $res2[0]);
+            if($res2){
+                $this->assign('houseInfo', $res2[0]);
+            }else{
+                $this->assign('houseInfo',0);
+            }
             $this->assign('type',$personType[0]);
+            
         }
         $this->display();
     }
@@ -99,10 +104,10 @@ class RentController extends Controller
             $this->error("折扣率起始时间不能为空");
         }
         if(!$ruzhan_time){
-            $ruzhan_time = "0000-00-00";
+            $ruzhan_time = NULL;
         }
         if(!$chuzhan_time){
-            $chuzhan_time = "0000-00-00";
+            $chuzhan_time = null;
         }
         $data = array(
             'card_number' => $card_number,
@@ -175,10 +180,10 @@ class RentController extends Controller
             $this->error("折扣率起始时间不能为空");
         }
 		if(!$ruzhan_time){
-			$ruzhan_time = "0000-00-00";
+			$ruzhan_time = null;
 		}
 		if(!$chuzhan_time){
-			$chuzhan_time = "0000-00-00";
+			$chuzhan_time = null;
 		}
         $data = array(
             'card_number' => $card_number,
@@ -215,8 +220,7 @@ class RentController extends Controller
         $person_type=M('person_type');
         $card_number = I('get.card_number');
         $time=I('get.time');
-        $houseRecord = $house->where("card_number = $card_number")->select();
-        
+        $houseRecord = $house->where("card_number = $card_number")->select();        
         $fangzu = $fangzujilu->where("card_number = $card_number")
             ->order('id')
             ->select();
@@ -262,13 +266,13 @@ class RentController extends Controller
                 ->field("rent")
                 ->select();
             $unitPrice = $unitPrice[0][rent];
-            $mDay = (strtotime("$end") - strtotime("$firstDay")) / (24 * 60 * 60);
-            $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60);
+            $mDay = (strtotime("$end") - strtotime("$firstDay")) / (24 * 60 * 60)+1;
+            $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60)+1;
             $rent = ($area * $unitPrice) / $mDay * $days;
             // 计算当前递增折扣率 次数
             $person1 = $person->where("card_number=$card_number")->select();
             $type=$person1[0]['type'];
-            $where['name']=array('like',$type);
+            $where['name']=$type;
             $personType=$person_type->where($where)->select();
             $max_discount = $personType[0]['max_discount'];
             $start_discount = $personType[0]['start_discount'];
@@ -281,14 +285,14 @@ class RentController extends Controller
             // 计算折扣率 实缴租金
             $flag1 = strtotime("$start") - strtotime("$discount_time");
             $flag2 = strtotime("$end") - strtotime("$discount_time");
-            if ($flag1 > 0 && $flag2 > 0) { // 第一种情况：折扣率起始时间在当月之前
+            if ($flag1 >= 0 && $flag2 >= 0) { // 第一种情况：折扣率起始时间在当月之前
                 $discount = $start_discount + $increase_discount * $diffYear;
                 if ($discount > $max_discount) {
                     $discount = $max_discount;
                 }
                 $realRent = $rent * ($discount / 100);
             } else 
-                if ($flag1 < 0 && $flag2 > 0) { // 第二种情况：折扣率起始时间在当月中
+                if ($flag1 <= 0 && $flag2 >= 0) { // 第二种情况：折扣率起始时间在当月中
                     $discount = $start_discount + $increase_discount * $diffYear;
                     if ($discount > $max_discount) {
                         $discount = $max_discount;
@@ -297,7 +301,7 @@ class RentController extends Controller
                     $noDisDay = $mDay - $disDay;
                     $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
                 } else 
-                    if ($flag1 < 0 && $flag2 < 0) { // 第三种情况：折扣率起始时间在当月后
+                    if ($flag1 <= 0 && $flag2 <= 0) { // 第三种情况：折扣率起始时间在当月后
                         $realRent = $rent;
                     }
             $realRent=round($realRent,2);
@@ -313,7 +317,8 @@ class RentController extends Controller
             );
             // 生成剩余未缴费记录
             for ($i = 1; $i < $m; $i ++) {
-                $start = date('Y-m-01', strtotime("$startdate + $i month"));
+                $startFisrt=date('Y-m-01',strtotime($startdate));
+                $start = date('Y-m-01', strtotime("$startFisrt + $i month"));
                 $end = date('Y-m-d', strtotime("$start + 1 month - 1 day"));
                 $month = date('Y-m-d', strtotime($start));
                 
@@ -330,14 +335,14 @@ class RentController extends Controller
                 // 计算折扣率 实缴租金
                 $flag1 = strtotime("$start") - strtotime("$discount_time");
                 $flag2 = strtotime("$end") - strtotime("$discount_time");
-                if ($flag1 > 0 && $flag2 > 0) { // 第一种情况：折扣率起始时间在当月之前
+                if ($flag1 >= 0 && $flag2 >= 0) { // 第一种情况：折扣率起始时间在当月之前
                     $discount = $start_discount + $increase_discount * $diffYear;
                     if ($discount > $max_discount) {
                         $discount = $max_discount;
                     }
                     $realRent = $rent * ($discount / 100);
                 } else 
-                    if ($flag1 < 0 && $flag2 > 0) { // 第二种情况：折扣率起始时间在当月中
+                    if ($flag1 <= 0 && $flag2 >= 0) { // 第二种情况：折扣率起始时间在当月中
                         $discount = $start_discount + $increase_discount * $diffYear;
                         if ($discount > $max_discount) {
                             $discount = $max_discount;
@@ -346,7 +351,7 @@ class RentController extends Controller
                         $noDisDay = $mDay - $disDay;
                         $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
                     } else 
-                        if ($flag1 < 0 && $flag2 < 0) { // 第三种情况：折扣率起始时间在当月后
+                        if ($flag1 <= 0 && $flag2 <= 0) { // 第三种情况：折扣率起始时间在当月后
                             $realRent = $rent;
                         }
                 $realRent=round($realRent,2);
@@ -378,7 +383,8 @@ class RentController extends Controller
             // 生成剩余未缴费记录
             for ($i = 0; $i < $m; $i ++) {
                 $j = $i + 1;
-                $start = date('Y-m-01', strtotime("$startdate + $j month"));
+                $startFisrt=date('Y-m-01',strtotime("$startdate"));
+                $start = date('Y-m-01', strtotime("$startFisrt + $j month"));
                 $end = date('Y-m-d', strtotime("$start + 1 month - 1 day"));
                 $month = date('Y-m-d', strtotime($start));
                 
@@ -399,13 +405,13 @@ class RentController extends Controller
                     ->field("rent")
                     ->select();
                 $unitPrice = $unitPrice[0][rent];
-                $mDay = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60);
-                $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60);
+                $mDay = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60)+1;
+                $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60)+1;
                 $rent = ($area * $unitPrice) / $mDay * $days;
                 // 计算当前递增折扣率 次数
                 $person1 = $person->where("card_number=$card_number")->select();
                 $type=$person1[0]['type'];
-                $where['name']=array('like',$type);
+                $where['name']=$type;
                 $personType=$person_type->where($where)->select();
                 $max_discount = $personType[0]['max_discount'];
                 $start_discount = $personType[0]['start_discount'];
@@ -418,7 +424,7 @@ class RentController extends Controller
                 // 计算折扣率 实缴租金
                 $flag1 = strtotime("$start") - strtotime("$discount_time");
                 $flag2 = strtotime("$end") - strtotime("$discount_time");
-                if ($flag1 > 0 && $flag2 > 0) { // 第一种情况：折扣率起始时间在当月之前
+                if ($flag1 >= 0 && $flag2 >= 0) { // 第一种情况：折扣率起始时间在当月之前
                     $discount = $start_discount + $increase_discount * $diffYear;
                     
                     if ($discount > $max_discount) {
@@ -426,7 +432,7 @@ class RentController extends Controller
                     }
                     $realRent = $rent * ($discount / 100);
                 } else 
-                    if ($flag1 < 0 && $flag2 > 0) { // 第二种情况：折扣率起始时间在当月中
+                    if ($flag1 <= 0 && $flag2 >= 0) { // 第二种情况：折扣率起始时间在当月中
                         $discount = $start_discount + $increase_discount * $diffYear;
                         
                         if ($discount > $max_discount) {
@@ -436,7 +442,7 @@ class RentController extends Controller
                         $noDisDay = $mDay - $disDay;
                         $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
                     } else 
-                        if ($flag1 < 0 && $flag2 < 0) { // 第三种情况：折扣率起始时间在当月后
+                        if ($flag1 <= 0 && $flag2 <= 0) { // 第三种情况：折扣率起始时间在当月后
                             $realRent = $rent;
                         }
                 $realRent=round($realRent,2);
@@ -747,13 +753,11 @@ class RentController extends Controller
             $where['v_name']=$name;
             $houseData=$house->where($where)->select();
             $xiaoquRent=0;
-            $xiaoquExpense=0;
+            $xiaoquExpense=$expense;
             $xiaoquNumber=0;
             $xiaoquManage=$manage;
             $xiaoquOthers=0;
             foreach($houseData as $h){
-                $xiaoquExpense+=$h['area']*$expense;
-                // $xiaoquManage+=$h['area']*$xiaoquManage;
                 $xiaoquOthers+=$h['area']*$xiaoquOthers;
                 if($h['state']=="在用"){
                     $id=$h['id'];
@@ -1302,7 +1306,7 @@ class RentController extends Controller
                 $v_name=$x['name'];
                 $price=$x['rent'];
                 if($x['type']==$t){
-                    $where['v_name']=array('like',$v_name);
+                    $where['v_name']=$v_name;
                     $houseData=$house->where($where)->select();
                     $totalHouse=count($houseData);
                     foreach($houseData as $h){
@@ -1356,7 +1360,7 @@ class RentController extends Controller
             'usedHouse'=>$uhF,
             'rent'=>$rentF,
             'expense'=>$expenseF,
-            'differ'=>$rentT-$expenseF
+            'differ'=>$rentF-$expenseF
         );
         $this->assign('data',$data)->assign('total',$total)->assign('time',$t1)->display();
     }
@@ -1447,7 +1451,7 @@ class RentController extends Controller
             'usedHouse'=>$uhF,
             'rent'=>$rentF,
             'expense'=>$expenseF,
-            'differ'=>$rentT-$expenseF
+            'differ'=>$rentF-$expenseF
         );
     
     
@@ -1550,6 +1554,15 @@ class RentController extends Controller
         $xiaoquData=$xiaoqu->select();
         $xiaoquQuantity=count($xiaoquData);
         $i=0;
+        //总计
+        $person1T=0;
+        $person2T=0;
+        $person3T=0;
+        $person4T=0;
+        $rent1T=0;
+        $rent2T=0;
+        $rent3T=0;
+        $rent4T=0;
         foreach($xiaoquData as $x){
             $name=$x[name];
             // 1=工资库代扣  ；  2=师院代扣；  3=附中代扣；  4=银行代扣  ；    person 总人数    rent 总租金
@@ -1561,7 +1574,8 @@ class RentController extends Controller
             $rent3=0;
             $person4=0;
             $rent4=0;
-            $where['v_name']=array('like',$name);
+            
+            $where['v_name']=$name;
             $houseData=$house->where($where)->select();
             foreach($houseData as $h){              //遍历该小区所有用户
                 if($h['state']=="在用"){
@@ -1603,8 +1617,28 @@ class RentController extends Controller
                 "person4"=>$person4,
                 "rent4"=>$rent4
             );
+            $person1T+=$person1;
+            $person2T+=$person2;
+            $person3T+=$person3;
+            $person4T+=$person4;
+            $rent1T+=$rent1;
+            $rent2T+=$rent2;
+            $rent3T+=$rent3;
+            $rent4T+=$rent4;
             $i++;
         }
+        //总计数据
+        $data[$i]=array(
+            "name"=>"总计",
+            "person1"=>$person1T,
+            "rent1"=>$rent1T,
+            "person2"=>$person2T,
+            "rent2"=>$rent2T,
+            "person3"=>$person3T,
+            "rent3"=>$rent3T,
+            "person4"=>$person4T,
+            "rent4"=>$rent4T
+        );
         list($t1['y'],$t1['m'])=explode("-", $time);
         $this->assign('time',$t1);
         $this->assign("data",$data);
@@ -1627,6 +1661,14 @@ class RentController extends Controller
         $xiaoquData=$xiaoqu->select();
         $xiaoquQuantity=count($xiaoquData);
         $i=0;
+        $person1T=0;
+        $person2T=0;
+        $person3T=0;
+        $person4T=0;
+        $rent1T=0;
+        $rent2T=0;
+        $rent3T=0;
+        $rent4T=0;
         foreach($xiaoquData as $x){
             $name=$x[name];
             // 1=工资库代扣  ；  2=师院代扣；  3=附中代扣；  4=银行代扣  ；    person 总人数    rent 总租金
@@ -1680,8 +1722,27 @@ class RentController extends Controller
                 "person4"=>$person4,
                 "rent4"=>$rent4
             );
+            $person1T+=$person1;
+            $person2T+=$person2;
+            $person3T+=$person3;
+            $person4T+=$person4;
+            $rent1T+=$rent1;
+            $rent2T+=$rent2;
+            $rent3T+=$rent3;
+            $rent4T+=$rent4;
             $i++;
         }
+        $data[$i]=array(
+            "name"=>"总计",
+            "person1"=>$person1T,
+            "rent1"=>$rent1T,
+            "person2"=>$person2T,
+            "rent2"=>$rent2T,
+            "person3"=>$person3T,
+            "rent3"=>$rent3T,
+            "person4"=>$person4T,
+            "rent4"=>$rent4T
+        );
         //计算数据 end
         
         $headArr = array();
@@ -1884,38 +1945,209 @@ class RentController extends Controller
             $daikou = $p['daikoufang'];
             $card_number = $p['card_number'];
             if($daikou == "工资库代扣" || $daikou == "师院代扣" || $daikou == "附中代扣"){
+                $isDaikou = 1;    
                 //先将已有未交记录变更为已交
                 $rentExist = $fangzujilu->where("card_number = $card_number")->select();
                 foreach ($rentExist as $re) {  
                     $re['status']="已交";
                     $fangzujilu->save($re);
                 }
+            }else{
+                $isDaikou = 0;
+            }
 //////////////////////////遍历所有人员 若代扣方不是银行，则自动交租，生成记录
-                $houseRecord = $house->where("card_number = $card_number")->select();
-                if($houseRecord){
-                    $fangzu = $fangzujilu->where("card_number = $card_number")
-                    ->order('id')
+            $houseRecord = $house->where("card_number = $card_number")->select();
+            if($houseRecord){
+                $fangzu = $fangzujilu->where("card_number = $card_number")
+                ->order('id')
+                ->select();
+                $count = count($fangzu);
+                if ($count == 0) { // 若没有缴费记录，全部生成
+                     
+                    // 计算入住时间到现在的月份差，生成记录表
+                
+                    $start_date = strtotime($houseRecord[0]['start_time']);
+                    list ($cdate['y'], $cdate['m']) = explode("-", date('Y-m', $current_date));
+                    list ($sdate['y'], $sdate['m']) = explode("-", date('Y-m', $start_date));
+                    $m = ($cdate['y'] - $sdate['y']) * 12 + $cdate['m'] - $sdate['m'] + 1;
+                    // $m为入住起到现在的 月数差
+                
+                    $house_id = $houseRecord[0]['id'];
+                    $startdate = $houseRecord[0]['start_time'];
+                    // 先生成入住当月的未缴费记录
+                    $start = date('Y-m-d', strtotime("$startdate"));
+                    $firstDay = date('Y-m-01', strtotime("$startdate"));
+                    $end = date('Y-m-d', strtotime("$firstDay + 1 month - 1 day"));
+                    $month = date('Y-m-d', strtotime($start));
+                
+                    // 计算租金1
+                    $area = $house->where("card_number = $card_number")
+                    ->field("area")
                     ->select();
-                    $count = count($fangzu);
-                    if ($count == 0) { // 若没有缴费记录，全部生成
-                         
-                        // 计算入住时间到现在的月份差，生成记录表
+                    $xqName = $house->where("card_number=$card_number")
+                    ->field("v_name")
+                    ->select();
+                    $area = $area[0]['area'];
+                    $xqName = $xqName[0]['v_name'];
+                    $where['name'] = $xqName;
+                    $unitPrice = $xiaoqu->where($where)
+                    ->field("rent")
+                    ->select();
+                    $unitPrice = $unitPrice[0][rent];
+                    $mDay = (strtotime("$end") - strtotime("$firstDay")) / (24 * 60 * 60)+1;
+                    $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60)+1;
+                    $rent = ($area * $unitPrice) / $mDay * $days;
+                    // 计算当前递增折扣率 次数
+                    $person1 = $person->where("card_number=$card_number")->select();
+                    $type=$person1[0]['type'];
+                    $where['name']=$type;
+                    $personType=$person_type->where($where)->select();
+                    $max_discount = $personType[0]['max_discount'];
+                    $start_discount = $personType[0]['start_discount'];
+                    $increase_discount = $personType[0]['increase_discount'];
+                    $discount_time = $person1[0]['discount_time'];
+                    $diffYear = floor((strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60 * 365)); // 折扣率开始时间至今多少年
+                    if ($diffYear < 0) {
+                        $diffYear = 0;
+                    }
+                    // 计算折扣率 实缴租金
+                    $flag1 = strtotime("$start") - strtotime("$discount_time");
+                    $flag2 = strtotime("$end") - strtotime("$discount_time");
+                    if ($flag1 >= 0 && $flag2 >= 0) { // 第一种情况：折扣率起始时间在当月之前
+                        $discount = $start_discount + $increase_discount * $diffYear;
+                        if ($discount > $max_discount) {
+                            $discount = $max_discount;
+                        }
+                        $realRent = $rent * ($discount / 100);
+                    } else
+                        if ($flag1 <= 0 && $flag2 >= 0) { // 第二种情况：折扣率起始时间在当月中
+                            $discount = $start_discount + $increase_discount * $diffYear;
+                            if ($discount > $max_discount) {
+                                $discount = $max_discount;
+                            }
+                            $disDay = (strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60);
+                            $noDisDay = $mDay - $disDay;
+                            $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
+                    } else
+                        if ($flag1 <= 0 && $flag2 <= 0) { // 第三种情况：折扣率起始时间在当月后
+                            $realRent = $rent;
+                    }
+                    $realRent=round($realRent,2);
+                    if($isDaikou){
+                        $data[0] = array(
+                            'house_id' => $house_id,
+                            'card_number' => $card_number,
+                            'start_time' => $start,
+                            'end_time' => $end,
+                            'month' => $month,
+                            'rent' => $realRent,
+                            'res_person' => "",
+                            'status' => '已交'
+                        );
+                    }else{
+                        $data[0] = array(
+                            'house_id' => $house_id,
+                            'card_number' => $card_number,
+                            'start_time' => $start,
+                            'end_time' => $end,
+                            'month' => $month,
+                            'rent' => $realRent,
+                            'res_person' => "",
+                            'status' => '未交'
+                        );
+                    }
                     
-                        $start_date = strtotime($houseRecord[0]['start_time']);
-                        list ($cdate['y'], $cdate['m']) = explode("-", date('Y-m', $current_date));
-                        list ($sdate['y'], $sdate['m']) = explode("-", date('Y-m', $start_date));
-                        $m = ($cdate[y] - $sdate['y']) * 12 + $cdate['m'] - $sdate['m'] + 1;
-                        // $m为入住起到现在的 月数差
-                    
-                        $house_id = $houseRecord[0]['id'];
-                        $startdate = $houseRecord[0]['start_time'];
-                        // 先生成入住当月的未缴费记录
-                        $start = date('Y-m-d', strtotime("$startdate"));
-                        $firstDay = date('Y-m-01', strtotime("$startdate"));
-                        $end = date('Y-m-d', strtotime("$firstDay + 1 month - 1 day"));
+                    // 生成剩余未缴费记录
+                    for ($i = 1; $i < $m; $i ++) {
+                        $startFisrt=date('Y-m-01',strtotime($startdate));
+                        $start = date('Y-m-01', strtotime("$startFisrt + $i month"));
+                        $end = date('Y-m-d', strtotime("$start + 1 month - 1 day"));
                         $month = date('Y-m-d', strtotime($start));
-                    
-                        // 计算租金1
+                
+                        // 计算租金2
+                
+                        $mDay = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60) + 1;
+                        $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60) + 1;
+                        $rent = ($area * $unitPrice) / $mDay * $days;
+                        // 计算当前递增折扣率 次数
+                        $diffYear = floor((strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60 * 365)); // 折扣率开始时间至今多少年
+                        if ($diffYear < 0) {
+                            $diffYear = 0;
+                        }
+                        // 计算折扣率 实缴租金
+                        $flag1 = strtotime("$start") - strtotime("$discount_time");
+                        $flag2 = strtotime("$end") - strtotime("$discount_time");
+                        if ($flag1 >= 0 && $flag2 >= 0) { // 第一种情况：折扣率起始时间在当月之前
+                            $discount = $start_discount + $increase_discount * $diffYear;
+                            if ($discount > $max_discount) {
+                                $discount = $max_discount;
+                            }
+                            $realRent = $rent * ($discount / 100);
+                        } else
+                            if ($flag1 <= 0 && $flag2 >= 0) { // 第二种情况：折扣率起始时间在当月中
+                                $discount = $start_discount + $increase_discount * $diffYear;
+                                if ($discount > $max_discount) {
+                                    $discount = $max_discount;
+                                }
+                                $disDay = (strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60);
+                                $noDisDay = $mDay - $disDay;
+                                $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
+                        } else
+                            if ($flag1 <= 0 && $flag2 <= 0) { // 第三种情况：折扣率起始时间在当月后
+                                $realRent = $rent;
+                        }
+                        $realRent=round($realRent,2);
+                        if($isDaikou){
+                            $data[$i] = array(
+                                'house_id' => $house_id,
+                                'card_number' => $card_number,
+                                'start_time' => $start,
+                                'end_time' => $end,
+                                'month' => $month,
+                                'rent' => $realRent,
+                                'res_person' => "",
+                                'status' => '已交'
+                            );
+                        }else{
+                            $data[$i] = array(
+                                'house_id' => $house_id,
+                                'card_number' => $card_number,
+                                'start_time' => $start,
+                                'end_time' => $end,
+                                'month' => $month,
+                                'rent' => $realRent,
+                                'res_person' => "",
+                                'status' => '未交'
+                            );
+                        }
+                    }
+                    foreach ($data as $sql) {
+                        $where['card_number']=$card_number;
+                        $where['start_time']=$sql['start_time'];
+                        $res=$fangzujilu->where($where)->select();
+                        if(!$res)
+                            $fangzujilu->add($sql);
+                    }
+                } else { // 若已有缴费记录，生成剩余部分
+                     
+                    // 计算入住时间到现在的月份差，生成记录表
+                    $start_date = strtotime($fangzu[$count - 1]['month']);
+                    list ($cdate['y'], $cdate['m']) = explode("-", date('Y-m', $current_date));
+                    list ($sdate['y'], $sdate['m']) = explode("-", date('Y-m', $start_date));
+                    $m = ($cdate['y'] - $sdate['y']) * 12 + $cdate['m'] - $sdate['m'];
+                    // $m为上次缴费起到现在的 月数差(与入住 到现在的 月数差 不同）
+                
+                    $house_id = $houseRecord[0]['id'];
+                    $startdate = $fangzu[$count - 1]['month'];
+                    // 生成剩余未缴费记录
+                    for ($i = 0; $i < $m; $i ++) {
+                        $j = $i + 1;
+                        $startFisrt=date('Y-m-01',strtotime($startdate));
+                        $start = date('Y-m-01', strtotime("$startFisrt + $j month"));
+                        $end = date('Y-m-d', strtotime("$start + 1 month - 1 day"));
+                        $month = date('Y-m-d', strtotime($start));
+                
+                        // 计算租金3
                         $area = $house->where("card_number = $card_number")
                         ->field("area")
                         ->select();
@@ -1932,8 +2164,8 @@ class RentController extends Controller
                         ->field("rent")
                         ->select();
                         $unitPrice = $unitPrice[0][rent];
-                        $mDay = (strtotime("$end") - strtotime("$firstDay")) / (24 * 60 * 60);
-                        $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60);
+                        $mDay = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60)+1;
+                        $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60)+1;
                         $rent = ($area * $unitPrice) / $mDay * $days;
                         // 计算当前递增折扣率 次数
                         $person1 = $person->where("card_number=$card_number")->select();
@@ -1951,15 +2183,17 @@ class RentController extends Controller
                         // 计算折扣率 实缴租金
                         $flag1 = strtotime("$start") - strtotime("$discount_time");
                         $flag2 = strtotime("$end") - strtotime("$discount_time");
-                        if ($flag1 > 0 && $flag2 > 0) { // 第一种情况：折扣率起始时间在当月之前
+                        if ($flag1 >= 0 && $flag2 >= 0) { // 第一种情况：折扣率起始时间在当月之前
                             $discount = $start_discount + $increase_discount * $diffYear;
+                
                             if ($discount > $max_discount) {
                                 $discount = $max_discount;
                             }
                             $realRent = $rent * ($discount / 100);
                         } else
-                            if ($flag1 < 0 && $flag2 > 0) { // 第二种情况：折扣率起始时间在当月中
+                            if ($flag1 <= 0 && $flag2 >= 0) { // 第二种情况：折扣率起始时间在当月中
                                 $discount = $start_discount + $increase_discount * $diffYear;
+                
                                 if ($discount > $max_discount) {
                                     $discount = $max_discount;
                                 }
@@ -1967,59 +2201,11 @@ class RentController extends Controller
                                 $noDisDay = $mDay - $disDay;
                                 $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
                         } else
-                            if ($flag1 < 0 && $flag2 < 0) { // 第三种情况：折扣率起始时间在当月后
+                            if ($flag1 <= 0 && $flag2 <= 0) { // 第三种情况：折扣率起始时间在当月后
                                 $realRent = $rent;
                         }
                         $realRent=round($realRent,2);
-                        $data[0] = array(
-                            'house_id' => $house_id,
-                            'card_number' => $card_number,
-                            'start_time' => $start,
-                            'end_time' => $end,
-                            'month' => $month,
-                            'rent' => $realRent,
-                            'res_person' => "",
-                            'status' => '已交'
-                        );
-                        // 生成剩余未缴费记录
-                        for ($i = 1; $i < $m; $i ++) {
-                            $start = date('Y-m-01', strtotime("$startdate + $i month"));
-                            $end = date('Y-m-d', strtotime("$start + 1 month - 1 day"));
-                            $month = date('Y-m-d', strtotime($start));
-                    
-                            // 计算租金2
-                    
-                            $mDay = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60) + 1;
-                            $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60) + 1;
-                            $rent = ($area * $unitPrice) / $mDay * $days;
-                            // 计算当前递增折扣率 次数
-                            $diffYear = floor((strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60 * 365)); // 折扣率开始时间至今多少年
-                            if ($diffYear < 0) {
-                                $diffYear = 0;
-                            }
-                            // 计算折扣率 实缴租金
-                            $flag1 = strtotime("$start") - strtotime("$discount_time");
-                            $flag2 = strtotime("$end") - strtotime("$discount_time");
-                            if ($flag1 > 0 && $flag2 > 0) { // 第一种情况：折扣率起始时间在当月之前
-                                $discount = $start_discount + $increase_discount * $diffYear;
-                                if ($discount > $max_discount) {
-                                    $discount = $max_discount;
-                                }
-                                $realRent = $rent * ($discount / 100);
-                            } else
-                                if ($flag1 < 0 && $flag2 > 0) { // 第二种情况：折扣率起始时间在当月中
-                                    $discount = $start_discount + $increase_discount * $diffYear;
-                                    if ($discount > $max_discount) {
-                                        $discount = $max_discount;
-                                    }
-                                    $disDay = (strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60);
-                                    $noDisDay = $mDay - $disDay;
-                                    $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
-                            } else
-                                if ($flag1 < 0 && $flag2 < 0) { // 第三种情况：折扣率起始时间在当月后
-                                    $realRent = $rent;
-                            }
-                            $realRent=round($realRent,2);
+                        if($isDaikou){
                             $data[$i] = array(
                                 'house_id' => $house_id,
                                 'card_number' => $card_number,
@@ -2030,86 +2216,7 @@ class RentController extends Controller
                                 'res_person' => "",
                                 'status' => '已交'
                             );
-                        }
-                        foreach ($data as $sql) {
-                            $fangzujilu->add($sql);
-                        }
-                    } else { // 若已有缴费记录，生成剩余部分
-                         
-                        // 计算入住时间到现在的月份差，生成记录表
-                        $start_date = strtotime($fangzu[$count - 1]['month']);
-                        list ($cdate['y'], $cdate['m']) = explode("-", date('Y-m', $current_date));
-                        list ($sdate['y'], $sdate['m']) = explode("-", date('Y-m', $start_date));
-                        $m = ($cdate[y] - $sdate['y']) * 12 + $cdate['m'] - $sdate['m'];
-                        // $m为上次缴费起到现在的 月数差(与入住 到现在的 月数差 不同）
-                    
-                        $house_id = $houseRecord[0]['id'];
-                        $startdate = $fangzu[$count - 1]['month'];
-                        // 生成剩余未缴费记录
-                        for ($i = 0; $i < $m; $i ++) {
-                            $j = $i + 1;
-                            $start = date('Y-m-01', strtotime("$startdate + $j month"));
-                            $end = date('Y-m-d', strtotime("$start + 1 month - 1 day"));
-                            $month = date('Y-m-d', strtotime($start));
-                    
-                            // 计算租金3
-                            $area = $house->where("card_number = $card_number")
-                            ->field("area")
-                            ->select();
-                            $xqName = $house->where("card_number=$card_number")
-                            ->field("v_name")
-                            ->select();
-                            $area = $area[0]['area'];
-                            $xqName = $xqName[0]['v_name'];
-                            $where['name'] = array(
-                                'like',
-                                $xqName
-                            );
-                            $unitPrice = $xiaoqu->where($where)
-                            ->field("rent")
-                            ->select();
-                            $unitPrice = $unitPrice[0][rent];
-                            $mDay = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60);
-                            $days = (strtotime("$end") - strtotime("$start")) / (24 * 60 * 60);
-                            $rent = ($area * $unitPrice) / $mDay * $days;
-                            // 计算当前递增折扣率 次数
-                            $person1 = $person->where("card_number=$card_number")->select();
-                            $type=$person1[0]['type'];
-                            $where['name']=array('like',$type);
-                            $personType=$person_type->where($where)->select();
-                            $max_discount = $personType[0]['max_discount'];
-                            $start_discount = $personType[0]['start_discount'];
-                            $increase_discount = $personType[0]['increase_discount'];
-                            $discount_time = $person1[0]['discount_time'];
-                            $diffYear = floor((strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60 * 365)); // 折扣率开始时间至今多少年
-                            if ($diffYear < 0) {
-                                $diffYear = 0;
-                            }
-                            // 计算折扣率 实缴租金
-                            $flag1 = strtotime("$start") - strtotime("$discount_time");
-                            $flag2 = strtotime("$end") - strtotime("$discount_time");
-                            if ($flag1 > 0 && $flag2 > 0) { // 第一种情况：折扣率起始时间在当月之前
-                                $discount = $start_discount + $increase_discount * $diffYear;
-                    
-                                if ($discount > $max_discount) {
-                                    $discount = $max_discount;
-                                }
-                                $realRent = $rent * ($discount / 100);
-                            } else
-                                if ($flag1 < 0 && $flag2 > 0) { // 第二种情况：折扣率起始时间在当月中
-                                    $discount = $start_discount + $increase_discount * $diffYear;
-                    
-                                    if ($discount > $max_discount) {
-                                        $discount = $max_discount;
-                                    }
-                                    $disDay = (strtotime("$end") - strtotime("$discount_time")) / (24 * 60 * 60);
-                                    $noDisDay = $mDay - $disDay;
-                                    $realRent = (($discount / 100) * $disDay + 1 * $noDisDay) / $mDay * $rent;
-                            } else
-                                if ($flag1 < 0 && $flag2 < 0) { // 第三种情况：折扣率起始时间在当月后
-                                    $realRent = $rent;
-                            }
-                            $realRent=round($realRent,2);
+                        }else{
                             $data[$i] = array(
                                 'house_id' => $house_id,
                                 'card_number' => $card_number,
@@ -2118,16 +2225,20 @@ class RentController extends Controller
                                 'month' => $month,
                                 'rent' => $realRent,
                                 'res_person' => "",
-                                'status' => '已交'
+                                'status' => '未交'
                             );
-                        }
-                        foreach ($data as $sql) {
-                            $fangzujilu->add($sql);
                         }
                     }
+                    foreach ($data as $sql) {
+                        $where['card_number']=$card_number;
+                        $where['start_time']=$sql['start_time'];
+                        $res=$fangzujilu->where($where)->select();
+                        if(!$res)
+                            $fangzujilu->add($sql);
+                    }
                 }
-///////////////////////////未生成记录的人员交租结束
             }
+///////////////////////////未生成记录的人员交租结束
         }
         $this->success("批量缴费成功");
     }

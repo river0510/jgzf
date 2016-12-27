@@ -35,7 +35,7 @@
 								name="card_number">
 							</label>
 							</h1>
-							<label> <span>姓名：</span> <input type="text" name="name">
+							<label> <span>姓名：</span> <input type="text" name="name" maxlength="10">
 							</label> <label> <span>性别：</span> <select name="sex"
 								onChange="getMan()">
 									<option>男</option>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,22 +13,18 @@
 
     <div class="content-wrap">
     <div class="container">
-        
-                
                 <h1><img src="/jgzf/Public/images/icons/posts.png" alt="" /> 房源信息</h1>
-                <div class="title">
-        			
-    			</div>
+                <span>总记录：<?php echo ($count); ?>条</span>
                 <table class="table table-striped table-hover">
                     <thead>
            
                     <tr>
-                        
+                        <th>序号</th>
                         <th>地址</th>
                         <th>楼栋</th>
                         <th>房号</th>
                         <th>户型</th>
-                        <th>收费标准</th>
+                        <!-- <th>收费标准</th> -->
                         <th>姓名</th>
                         <th>部门</th>
                         <th>面积</th>
@@ -39,12 +35,12 @@
                 
                 	<?php if(is_array($name)): foreach($name as $key=>$n1): ?><tbody>
                     <tr>
-                       
+                        <td><?php echo ($key+1); ?></td>
                         <td><?php echo ($n1["v_name"]); ?></td>
                         <td><?php echo ($n1["building"]); ?></td>
                         <td><?php echo ($n1["house_number"]); ?></td>
                         <td><?php echo ($n1["style"]); ?></td>
-                        <td><?php echo ($n1["charge_standard"]); ?></td>
+                        <!-- <td><?php echo ($n1["charge_standard"]); ?></td> -->
                         <td><?php echo ($n1["owner_name"]); ?></td>
                         <td><?php echo ($n1["department"]); ?></td>
                         <td><?php echo ($n1["area"]); ?></td>

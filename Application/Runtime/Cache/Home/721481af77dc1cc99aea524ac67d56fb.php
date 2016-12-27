@@ -52,8 +52,8 @@
 				</table>
 
 				<div class="table-foot NoPrint" style="text-align: center">
-					<br> <a href="/jgzf/index.php/Home/Rent/form5Excel?y=<?php echo ($time['y']); ?>&w=<?php echo ($time['m']); ?>">
-						<button type="submit" class="btn btn-primary">导出excel</button></a>
+					<a href="/jgzf/index.php/Home/Rent/form5Excel?y=<?php echo ($time['y']); ?>&w=<?php echo ($time['m']); ?>">
+						<button type="submit" class="btn btn-primary" style="margin: 10px">导出excel</button></a>
 				</div>
 </body>
 </html>

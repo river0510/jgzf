@@ -36,7 +36,7 @@
 								name="card_number" value={$personInfo.card_number}>
 							</label>
 							</h1>
-							<label> <span>姓名：</span> <input type="text" name="name" value={$personInfo.name}>
+							<label> <span>姓名：</span> <input type="text" name="name" maxlength="10" value={$personInfo.name}>
 							</label> <label> <span>性别：</span> <select name="sex"
 								onChange="getMan()">
 									<if condition="$personInfo.sex eq '男'">

@@ -7,21 +7,19 @@
 	<link rel="stylesheet" href="/jgzf/Public/css/app.css">
 </head>
 <body>
-	<div class="bloc" id="content">
+	<div class="bloc" id="content"> 
 
 		<div class="content-wrap">
 			<div class="container" style="padding-top: 60px">
-
-
 				<h1>
-					<img src="/jgzf/Public/images/icons/posts.png" alt="" />房源信息
+					<img src="/jgzf/Public/images/icons/posts.png" alt="" />房源使用信息
 				</h1>
-
+				<span>总记录：<?php echo ($count); ?>条</span>
 				<table class="table table-striped table-hover">
 					<thead>
 
 						<tr>
-
+							<th>序号</th>
 							<th>地址</th>
 							<th>楼栋</th>
 							<th>房号</th>
@@ -35,7 +33,7 @@
 
 					<?php if(is_array($name)): foreach($name as $key=>$n1): ?><tbody>
 							<tr>
-
+								<td><?php echo ($key+1); ?></td>
 								<td><?php echo ($n1["v_name"]); ?></td>
 								<td><?php echo ($n1["building"]); ?></td>
 								<td><?php echo ($n1["house_number"]); ?></td>
@@ -146,6 +144,7 @@
   //               'phone'=>$result['phone_number']  电话号码
   //           );
 		$(document).ready(function(){
+			$('#submitButton').hide();
 			$('#num').focusout(function() {
 				var u = "<?php echo U('Index/nameJudge');?>"
 				$.ajax({

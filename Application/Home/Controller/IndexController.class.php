@@ -36,39 +36,32 @@ class IndexController extends Controller {
         //获取哪个小区的某个状态
         $get = I('get.name','','htmlspecialchars');
         $state = I('get.state','','htmlspecialchars');
-        //不为空则说明有值传递过来
-        if(!empty($get))
-        {
-            $condition['v_name'] = $get;
-            $condition['state'] = $state;
-            import('ORG.Util.Page');//引入分页类
-            $table_name = M('muyecun');
-            //进行分页
-            $count = $table_name->where($condition)->count();
-            $page = new Page($count,10);//一页十条数据
-            $show = $page->show();
-            $list = $table_name->where($condition)->limit($page->firstRow.','.$page->listRows)->select();
-         
-            //传递给模板显示出来
-            $this->assign('name',$list);
-            $this->assign('page',$show);
-            $this->display();
+        $condition['v_name'] = $get;
+        $condition['state'] = $state;
+        
+        //进行分页
+
+        import('ORG.Util.Page');
+        $table = M('muyecun');
+        if($get && $state){
+            $count = $table->where($condition)->count();
+        }else{
+            $count = $table->count();
         }
-        //为空则把所有数据输出
-        else {
-            import('ORG.Util.Page');
-            //初始化时显示在用的房间
-            $table_name = M('muyecun');
-            $count = $table_name->count();
-            $page = new Page($count,10);
-            $show = $page->show();
-            $result = $table_name->limit($page->firstRow.','.$page->listRows)->select();
-         
-            $this->assign('name',$result);
-            $this->assign('page',$show);
-            
-            $this->display();
-        } 
+        
+        $page = new \Think\Page($count,10);
+        $show = $page->show();
+        if($get && $state){
+            $res = $table->where($condition)->limit($page->firstRow.','.$page->listRows)->select();
+        }else{
+            $res = $table->limit($page->firstRow.','.$page->listRows)->select();
+        }
+        //传递给模板显示出来
+        $this->assign('name',$res);
+        $this->assign('page',$show);
+        $this->assign('count',$count);
+
+        $this->display();
   
     }
     public function nameJudge(){

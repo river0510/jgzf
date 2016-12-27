@@ -61,6 +61,9 @@
 
 					<tbody>
 						<tr>
+							<?php if($houseInfo == 0): ?><td>该用户未分配房屋</td>
+								<td><td><td><td>
+							<?php else: ?>
 							<td><?php echo ($houseInfo["v_name"]); ?></td>
 							<td><?php echo ($houseInfo["building"]); ?></td>
 							<td><?php echo ($houseInfo["house_number"]); ?></td>
@@ -92,7 +95,7 @@
 										</div>
 									</div>
 								</div>
-							</td>
+							</td><?php endif; ?>
 						</tr>
 					</tbody>
 

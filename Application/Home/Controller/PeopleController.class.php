@@ -25,7 +25,10 @@ class PeopleController extends Controller {
 
         $person = M('person');
         $card_number = I('get.card_number');
-        $res = $person->where("card_number = $card_number")->select();
+        if($card_number)
+          $res = $person->where("card_number = $card_number")->select();
+        else
+          $res = $person->select();
         if($res){
           $this->assign("data", $res)->display('People/peopleInfo');
         }
